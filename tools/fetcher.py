@@ -27,3 +27,4 @@ async def fetch_all_content(urls, headers):
     async with aiohttp.ClientSession() as session:
         tasks = [fetch_content(session, url, headers) for url in urls]
         return await asyncio.gather(*tasks)
+    

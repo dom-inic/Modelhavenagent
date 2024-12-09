@@ -1,6 +1,6 @@
 import asyncio
-from .fetcher import fetch_and_process_data
-from .vector_store import vector_store
+from core import fetch_and_process_data
+from vector_store import vector_store
 
 def web_search(search_query: str):
     async def run_search():
@@ -10,3 +10,6 @@ def web_search(search_query: str):
         return result_text
 
     return asyncio.run(run_search())
+
+result_text = web_search("LLama3")
+print(result_text)

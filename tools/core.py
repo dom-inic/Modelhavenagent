@@ -2,10 +2,10 @@ from concurrent.futures import ThreadPoolExecutor
 from langchain_core.documents import Document
 import aiohttp
 import asyncio
-from fetcher import fetch_page
-from processor import process_text_content
-from common import get_all_text_from_url
-from vector_store import vector_store
+from .fetcher import fetch_page
+from .processor import process_text_content
+from .common import get_all_text_from_url
+from .vector_store import vector_store
 
 chunk_size = 1024  # size of each text chunk
 headers = {

@@ -1,6 +1,6 @@
 import asyncio
-from core import fetch_and_process_data
-from vector_store import vector_store
+from .core import fetch_and_process_data
+from .vector_store import vector_store
 
 def web_search(search_query: str):
     async def run_search():
